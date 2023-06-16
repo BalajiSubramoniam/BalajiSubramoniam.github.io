@@ -6,12 +6,38 @@
    height:80px;
    background-color:#666666;
 }
-#text{
-   position:static;
+#ooblu{
+position:static;
+   top:350px;
+   left:140px;
+   width:100%;
    color:#333333;
    font-size:20px;
    font-family:'Alegreya';
    margin:100px;
+}
+#text{
+   position:static;
+   width:40%;
+   color:#333333;
+   font-size:20px;
+   font-family:'Alegreya';
+   margin:100px;
+   float:left;
+}
+#text2{
+   position:static;
+   width:60%;
+   color:#333333;
+   font-size:20px;
+   font-family:'Alegreya';
+   margin:100px;
+   float:left;
+}
+
+#image{
+float:right;
+margin:100px;
 }
 #blueBar{
    position:fixed;
@@ -48,4 +74,8 @@
   transition: all .6s ease-out;
   display: block;
   font-family:'Martel Sans';
+}
+
+#image{
+
 }
