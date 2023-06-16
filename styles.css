@@ -18,7 +18,7 @@ position:static;
 }
 #text{
    position:static;
-   width:40%;
+   width:370px;
    color:#333333;
    font-size:20px;
    font-family:'Alegreya';
@@ -36,9 +36,10 @@ position:static;
 }
 
 #image{
-width:40%;
+width:300px;
 float:right;
-margin:100px;
+margin-right:20px;
+margin-top:150px;
 }
 #blueBar{
    position:fixed;
