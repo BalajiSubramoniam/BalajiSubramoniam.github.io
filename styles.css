@@ -78,6 +78,31 @@ margin-top:150px;
   font-family:'Martel Sans';
 }
 
-#image{
 
+nav a {
+  color: #444;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 8px;
+  background-color: #A8A8A8;
+  position: absolute;
+  top: -30px;
+  right: 0px;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
 }
