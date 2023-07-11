@@ -71,3 +71,8 @@ nav a:hover::before {
 	padding: 50px;
 	border-spacing: 10px;
 }
+#text2{
+ position: fixed;
+ top: 120px;
+ left: 100px;
+}
