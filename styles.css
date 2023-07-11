@@ -1,108 +1,73 @@
-#blackBar{
-   position:fixed;
-   top:0;
-   left:0;
-   width:100%;
-   height:80px;
-   background-color:#666666;
+#navbar{
+	background-color:#404040;
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	height:70px;
 }
-#ooblu{
-position:static;
-   top:350px;
-   left 50px;
-   width:100%;
-   color:#333333;
-   font-size:20px;
-   font-family:'Alegreya';
-   margin:100px;
+#restricted{
+ width:80%;
+ position:absolute;
+ left:50%;
+ transform:translate(-50%,0%)
 }
-#text{
-   position:static;
-   width:370px;
-   color:#333333;
-   font-size:20px;
-   font-family:'Alegreya';
-   margin:50px;
-   float:left;
-}
-#text2{
-   position:static;
-   width:75%;
-   color:#333333;
-   font-size:20px;
-   font-family:'Alegreya';
-   margin:100px;
-   float:left;
-}
-
-#image{
-width:300px;
-float:right;
-margin-right:20px;
-margin-top:150px;
-}
-#blueBar{
-   position:fixed;
-   top:0;
-   left:280px;
-   width:90%;
-   height:80px;
-   background-color:#404040;
-}
-
-.outer{
-	display: inline-block;
-}
-.button {
-  width: 160px;
-  height: 80px;
-  display: block;
-
-  background: linear-gradient(to right, #666666 50%, #404040 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out;
-}
-
-.button:hover {
-  background-position: left bottom;
-}
-.text {
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0;
+  list-style: none;
+  align-items: center;
   text-align: center;
-  font-size: 16px;
-  line-height: 30px; 
-  padding: 25px;
-  color: white;
-  transition: all .6s ease-out;
-  display: block;
-  font-family:'Martel Sans';
 }
 
+.nav-list li {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
 
 nav a {
-  color: #444;
-  text-decoration: none;
-  font-size: 14px;
-  position: relative;
+ color: #B0B0B0;
 }
-
 nav a:hover {
-  color: #000;
+  color: #F5F5F5;
 }
-
+nav li {
+ position: relative;
+}
 nav a::before {
   content: '';
   display: block;
-  height: 8px;
-  background-color: #A8A8A8;
-  position: absolute;
-  top: -30px;
-  right: 0px;
-  width: 0%;
+  height: 3px;
+  background-color: #DCDCDC;
 
+  position: absolute;
+  top: -15px;
+  width: 0%;
   transition: all ease-in-out 250ms;
 }
 
 nav a:hover::before {
   width: 100%;
+}
+
+.container{
+ position: fixed;
+ top: 180px;
+ left: 70px;
+ display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 80%;
+  max-height: 500px;
+  overflow: auto;
+}
+.intro{
+	flex-shrink:1;
+	flex-grow: 1;
+	padding: 50px;
+	border-spacing: 10px;
 }
