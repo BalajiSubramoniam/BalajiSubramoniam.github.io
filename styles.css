@@ -75,4 +75,5 @@ nav a:hover::before {
  position: fixed;
  top: 120px;
  left: 100px;
+ max-width: 80%;
 }

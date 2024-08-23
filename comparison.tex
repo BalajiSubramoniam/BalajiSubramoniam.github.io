@@ -1,0 +1,112 @@
+\documentclass[10pt]{amsart}
+\usepackage{capt-of}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{enumitem}
+\usepackage{nicefrac}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\usepackage{mlmodern}
+\usepackage[capitalise]{cleveref}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}
+\usepackage[]{mdframed}
+\setcounter{section}{-1}
+\setcounter{tocdepth}{1}
+\usepackage{etoolbox}
+\theoremstyle{definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition}
+\crefname{prop}{Proposition}{Propositions}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{conv}[thm]{Convention}
+\newtheorem{rem}[thm]{Remark}
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+ \textbf{\large Milnor's Definition of a Manifold} 
+\end{center}
+\vspace{0.2cm}
+The aim of this document is to compare the definitions of an $n$-manifold as in \cite{Mil} and \cite{Lee}. For convenience, we shall refer to smooth $n$-manifolds according to \cite{Mil} ``Milnor $n$-manifolds''. What we call a ``chart $n$-manifold'' is precisely a smooth $n$-manifolds according to, for example, \cite{Lee} \emph{except} that we do not assume the underlying topological space to be second countable.
+
+\begin{conv}
+ $\mathbb{R} ^{n}$ will be viewed both as a chart $n$-manifold and a Milnor $n$-manifold with the singleton chart and the singleton local parametrisation respectively.
+\end{conv}
+\begin{notn}
+ For topological spaces $A$ and $B$, ``$A\subseteq_{\text{o} } B$'' means ``$A$ is an open subspace of $B$''.  
+\end{notn}
+
+\begin{notn}
+ Given a chart $n$-manifold $M$, let $F_{M}$ denote the set of smooth (in the ``chart sense'') real valued functions on $M$. Let $i : M \rightarrow \mathbb{R} ^{F_{M}} $ denote the evaluation map. 
+\end{notn}
+
+\begin{prop}\label{mainprop}
+	Let $M$ be a chart $n$-manifold. Then, $i(M)$ is canonically a Milnor manifold.  
+\end{prop}
+\begin{proof}
+ Fix $x\in M$.  Let $\alpha :\mathbb{R} ^{n} \rightarrow U \subseteq_{\text{o} } M$ be a chart around $x$ in the maximal atlas of $M$. We claim that the composition
+ \begin{align*}
+	 \beta :\mathbb{R} ^{n}\xrightarrow{\alpha } U \xrightarrow{i} i(U)\subseteq \mathbb{R} ^{F_{M}}
+ \end{align*}
+ is a local parametrisation around $i(x)$. In order to prove this, it is sufficient to show the following:
+ \begin{enumerate}[label=(\arabic*)]
+  \item $\beta $ is smooth.
+\item For all $y\in \mathbb{R} ^{n}$, $D\beta \vert_{y}$ has rank $n$.   
+ \item $\text{Im}(\beta )$ is open and $\beta$ is a homeomorphism onto its image.
+ \end{enumerate}
+ For $f\in F_{M}$, let $\pi _{f}:\mathbb{R} ^{F_{M}}\rightarrow \mathbb{R} $ denote the projection to the $f^{\text{th} }$ coordinate. Then, for any $f\in F_{M}$, $\pi _{f}\circ \beta = f\vert_{U}\circ \alpha $, which is smooth. Hence, $\beta $ is smooth.
+
+ For $i=1,\ldots ,n$, let $\psi _{i}:U \rightarrow \mathbb{R}  $ such that $\psi_i \circ \alpha =\pi _{i}$. Clearly, $\psi_{i}$ is smooth on $U$. Fix $y\in \mathbb{R} ^{n}$. Let $g_{i}\in F_{M}$ such that $g_{i}$ agrees with $\psi _{i}$ in an open neighbourhood of $\alpha (y)$. Consider the composition
+ \begin{align*}
+	 \mathbb{R} ^{n}\xrightarrow{\beta } i(M)\subseteq \mathbb{R} ^{F_{M}}\xrightarrow{\pi _{g_{1}},\ldots ,\pi _{g_{n}}} \mathbb{R} ^{n} 
+ \end{align*}
+ whose components are clearly $g_{i}\circ \alpha $. Thus,
+ \begin{align*}
+  \frac{\partial}{\partial u_{j}}(g_{i}\circ \alpha )\bigg\vert_{y}= \frac{\partial}{\partial u_{j}}(\psi _{i}\circ \alpha )\bigg\vert_{y} = \frac{\partial u_{i}}{\partial u_{j}}\bigg\vert_{y}=\begin{cases}
+  	1 &\text{ if }i=j\\
+	0 & \text{ otherwise } 
+  \end{cases}
+ \end{align*}
+ This proves (2). Lastly, suppose that $V\subseteq_{\text{o} } U$. For all $v\in V$, let $g_{v}\in F_{M}$ such that $g_{v}(v)>0$ and $\text{supp}(g_{v})\subseteq V$. Let $\pi _{g_{v}}:\mathbb{R} ^{F_{M}} \rightarrow \mathbb{R}  $ denote the projection to the $g_{v}^{\text{th} }$ coordinate. Then, 
+ \begin{itemize}
+  \item $\pi _{g_{v}}^{-1}(\mathbb{R} \setminus \{ 0 \} )\subseteq_{\text{o} } \mathbb{R} ^{F_{M}}$.
+ \item $i(v)\in \pi _{g_{v}}^{-1}(\mathbb{R} \setminus \{ 0 \} ) \cap i(M)\subseteq _{\text{o} } i(M)$.
+ \item $i(m)\notin \pi _{g_{v}}^{-1}(\mathbb{R} \setminus \{ 0 \} )\cap i(M)$ for all $m\in M\setminus V$.
+ \end{itemize}
+Hence, 
+\begin{align*}
+ i(V)=\bigcup\limits_{v\in V} \pi ^{-1}_{g_{v}} (\mathbb{R} \setminus \{ 0 \} )\cap i(M) \subseteq _{\text{o} } i(M) 
+\end{align*}
+
+This proves (3).
+\end{proof}
+%\begin{rem}
+%If $\pi _{0}:\mathbb{R} ^{F_{M}} \rightarrow \mathbb{R}  $ denotes the projection to the coordinate corresponding to the constant function at $0$, then $\pi ^{-1}(0)\subseteq_{\text{c} } \mathbb{R} ^{F_{M}}$ and hence, $M\rightarrow \mathbb{R} ^{F_{M}}$ is a topological embedding.     
+%\end{rem}
+
+\begin{rem}
+	In the proof of \cref{mainprop}, we might as well have relaxed the assumption that the domain of $\alpha $ is $\mathbb{R} ^{n}$ and the same argument could have been used to construct a local parametrisation. The constructed Milnor manifold structure is said to be canonical as any chart translates to a local parametrisation by pre-composition.  
+\end{rem}
+\begin{rem}
+	\cref{mainprop} essentially says that a chart $n$-manifold admits a smooth embedding into $\mathbb{R} ^{A}$ for some set $A$.     
+\end{rem}
+
+\begin{rem}
+	Conversely, given a Milnor $n$-manifold $N$, the local parametrisations on the underlying topological space provide an atlas for $N$, making it a chart $n$-manifold. It is also easy to see, under this correspondence, that the definitions of smooth functions (see \cite[P.17]{Mil} and \cite[P.34]{Lee}) coincide.
+\end{rem}
+
+
+\begin{thebibliography}{Neil1234}
+	\bibitem[MS74]{Mil} John Milnor and James Stasheff. \emph{Characteristic Classes}.
+	\bibitem[Lee00]{Lee} John Lee. \emph{Introduction to Smooth Manifolds}.
+\end{thebibliography}
+
+\end{document}
