@@ -10,11 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 		<link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml" />
         <title>Balaji Subramoniam</title>
-		<title>
-			Balaji Subramoniam
-		</title>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      extensions: ["tex2jax.js"],
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+      mtextFontInherit: true,
+      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+      messageStyle: "none"
+    });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"> </script>	
 	</head>
-	<body style="background-color:#D3D3D3;">
+	<body style="background-color:#D3D3D3; overflow:visible !important">
 		<div id='navbar'>
 		<div id='restricted'>
 		<nav>
@@ -31,7 +40,7 @@
 		<br/><br/><br/><br/><br/>
         <span style="font-family: 'Roboto', sans-serif; font-size: 14pt">
         <h3> Projects: </h3>
-	This is page is the destination for some of my projects and incoherent ramblings.
+	This is page is the dedicated to some of my projects and incoherent ramblings.
 
 <h4>Current:</h4>
 	<ol>
@@ -41,6 +50,19 @@
 		<li><b>TeXing Artin and Mazur's Etale Homotopy </b></li>
 	Fairly self-explanatory. However, a word of warning that I do not plan to make it faithful to the original. I will meddle with notation and terminology to make it, to some extent, consistent with modern literature. I might also add some remarks here and there if I find it helpful for my own reference. I shall shortly add a link to a github repository that reflects current progress. Corrections and suggestions are most welcome.
 	</ol>
+
+<h4>Past:</h4>
+	<ol>
+		<li> <b>Examples of Infinity Categories</b> (Master's Dissertation) </li> I wrote my Master's dissertation under the guidance of Prof. Neil Strickland and Prof. Sukhendu Mehrotra during my final year at CMI. Roughly, the aim of the dissertation is to compare locally 0-truncated infinity categories and ordinary categories. The comparison statement is a low-hanging fruit of definitions and tools introduced earlier, which are to some extent, technical. <a href"mailto:balajisubramoniam@gmail.com">Send me an email</a> if you would like a copy of the draft. In my opinion, you might find the draft useful only in the following cases:
+		<ol type="i">
+			<li> You are interested in the rudiments of the theory of infinity categories (more precisely, quasicategories). However, I must confess that there are many (in my honest opinion) better sources (See for example <a href="https://arxiv.org/pdf/1007.2925">Groth's </a> or <a href="https://people.math.rochester.edu/faculty/doug/otherpapers/Rezk-quasicats-intro.pdf"> Rezk's </a> notes) that serve this purpose. </li>
+			<li> You are interested in locally truncated ∞-categories. </li>
+			<li> You are interested in certain definitions of "(∞,2)-Categories" (Weak ∞-bicategories, ∞-bicategories and (∞,2)-categories) and how they compare. This is done in these papers of <a href="https://www.math.ias.edu/~lurie/papers/GoodwillieI.pdf">Lurie</a> and <a href="https://arxiv.org/pdf/1911.01905"> Gagna, Harpaz and Lanari </a>. The dissertation elaborates on some aspects of this along with a few supporting proofs that supplement the literature. </li>
+		</ol> 
+
+	</ol>
+
+	
 
 		</div>
 		</body>
